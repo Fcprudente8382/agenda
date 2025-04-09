@@ -10,6 +10,7 @@ import {
   Alert,
 } from '@mui/material';
 import { supabase } from '../config/supabase';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function RecuperarSenha() {
   const [email, setEmail] = useState('');
@@ -98,7 +99,7 @@ export default function RecuperarSenha() {
               {loading ? 'Enviando...' : 'Enviar Instruções'}
             </Button>
             <Box sx={{ textAlign: 'center' }}>
-              <Link href="/login" variant="body2">
+              <Link component={RouterLink} to="/login" variant="body2">
                 Voltar para o login
               </Link>
             </Box>

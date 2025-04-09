@@ -11,6 +11,7 @@ import {
   Alert,
 } from '@mui/material';
 import { supabase } from '../config/supabase';
+import { Link as RouterLink } from 'react-router-dom';
 
 interface LoginProps {
   onLogin: (success: boolean) => void;
@@ -111,12 +112,12 @@ export default function Login({ onLogin }: LoginProps) {
             </Button>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
-                <Link href="/recuperar-senha" variant="body2">
+                <Link component={RouterLink} to="/recuperar-senha" variant="body2">
                   Esqueceu sua senha?
                 </Link>
               </Grid>
               <Grid item xs={12} sm={6} sx={{ textAlign: 'right' }}>
-                <Link href="/cadastro" variant="body2">
+                <Link component={RouterLink} to="/cadastro" variant="body2">
                   Cadastre-se
                 </Link>
               </Grid>
