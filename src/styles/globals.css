@@ -1,0 +1,10 @@
+/* Adicionar estilos para a imagem do papel timbrado */
+.report-letterhead-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Opcional: para evitar espaço extra abaixo da imagem */
+}
+
+body {
+  @apply bg-background text-foreground;
+} 
